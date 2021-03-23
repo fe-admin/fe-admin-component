@@ -8,6 +8,7 @@ const install = function(Vue) {
   components.forEach(component => {
     Vue.component(component.name, component)
   })
+  return null
 }
 
 export default {
@@ -17,5 +18,3 @@ export default {
   SvgIcon,
   FeResult
 }
-const sdlfsdl = 111
-sd = 213
