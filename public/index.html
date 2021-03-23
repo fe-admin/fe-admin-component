@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <link rel="icon" type="image/svg+xml" href="<%=BASE_URL%>favicon.svg" />
+
+    <style>
+      .first-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 420px;
+        height: 100%;
+      }
+
+      .first-loading > h1 {
+        font-size: 30px;
+      }
+
+      .first-loading .loading-wrp {
+        padding: 98px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .first-loading .loader,
+      .first-loading .loader:before,
+      .first-loading .loader:after {
+        background: #1890ff;
+        -webkit-animation: loader-anim 1s infinite ease-in-out;
+        animation: loader-anim 1s infinite ease-in-out;
+        width: 1em;
+        height: 4em;
+      }
+      .first-loading .loader {
+        color: #1890ff;
+        text-indent: -9999em;
+        margin: 88px auto;
+        position: relative;
+        font-size: 11px;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+      .first-loading .loader:before,
+      .first-loading .loader:after {
+        position: absolute;
+        top: 0;
+        content: "";
+      }
+      .first-loading .loader:before {
+        left: -1.5em;
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+      .first-loading .loader:after {
+        left: 1.5em;
+      }
+      .loader-anim {
+        height: 200px;
+      }
+
+      @-webkit-keyframes loader-anim {
+        0%,
+        80%,
+        100% {
+          box-shadow: 0 0;
+          height: 4em;
+        }
+        40% {
+          box-shadow: 0 -2em;
+          height: 5em;
+        }
+      }
+      @keyframes loader-anim {
+        0%,
+        80%,
+        100% {
+          box-shadow: 0 0;
+          height: 4em;
+        }
+        40% {
+          box-shadow: 0 -2em;
+          height: 5em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="first-loading">
+        <h1>Fe-Admin</h1>
+        <div class="loading-wrp">
+          <div class="loader-anim">
+            <div class="loader">Loading...</div>
+          </div>
+        </div>
+        <div
+          style="display: flex; justify-content: center; align-items: center;"
+        >
+          Fe-Admin
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

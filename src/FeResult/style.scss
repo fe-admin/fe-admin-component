@@ -1,0 +1,45 @@
+.fe-result {
+  padding: 48px 32px;
+  background-color: #fff;
+  border-radius: 2px;
+  &-title {
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 24px;
+    line-height: 1.8;
+    text-align: center;
+  }
+  &-subtitle {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  &-403,
+  &-404,
+  &-500 {
+    .icon {
+      width: 250px;
+      height: 295px;
+    }
+  }
+  &-error {
+    .icon {
+      fill: #eb3b3c;
+    }
+  }
+  &-success {
+    .icon {
+      fill: #52c41a;
+    }
+  }
+
+  &-img {
+    text-align: center;
+    font-size: 72px;
+    margin-bottom: 24px;
+  }
+  &-extra {
+    margin-top: 32px;
+    text-align: center;
+  }
+}
