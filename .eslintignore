@@ -5,6 +5,3 @@ src/types/*
 test/*
 .eslintrc.js
 babel.config.js
-vue.config.js
-version.js
-deploy.js
