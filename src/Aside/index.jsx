@@ -1,30 +1,30 @@
-import MenuRender from './MenuRender'
-import './style.scss'
+import MenuRender from "./MenuRender";
+import "./style.scss";
 
 export default {
-  name: 'Aside',
+  name: "Aside",
   components: { MenuRender },
-  props: ['menuId', 'menuData', 'isCollapse'],
+  props: ["menuId", "menuData", "isCollapse", "updateMenuId"],
   data() {
     return {
       menus: [...this.menuData],
-      activeId: '0',
+      activeId: "0",
       defaultOpeneds: [0],
       flag: false,
-    }
+    };
   },
   created() {
-    this.listFilter()
-    this.setIndex()
+    this.listFilter();
+    this.setIndex();
   },
   mounted() {
-    this.redirect = this.redirect.bind(this)
+    this.redirect = this.redirect.bind(this);
   },
   updated() {
-    this.setIndex()
+    this.setIndex();
   },
   render() {
-    const { activeId, defaultOpeneds, isCollapse, menuData, redirect } = this
+    const { activeId, defaultOpeneds, isCollapse, menuData, redirect } = this;
     return (
       <el-scrollbar class="fe-aside">
         {this.$scopedSlots.default()}
@@ -38,48 +38,49 @@ export default {
           redirect={redirect}
         ></MenuRender>
       </el-scrollbar>
-    )
+    );
   },
   methods: {
     setIndex() {
-      this.activeId = `${this.ergodic(this.menus, this.menuId)}`
-      this.flag = false
+      this.activeId = `${this.ergodic(this.menus, this.menuId)}`;
+      this.flag = false;
+      this.updateMenuId(this.activeId);
     },
 
     ergodic(list, id) {
-      let mid = 0
-      if (this.flag) return
+      let mid = 0;
+      if (this.flag) return;
       for (let index = 0; index < list.length; index += 1) {
-        const item = list[index]
-        if (this.flag) break
+        const item = list[index];
+        if (this.flag) break;
         if (item.name === id) {
-          mid = item.id
-          this.flag = true
-          break
+          mid = item.id;
+          this.flag = true;
+          break;
         } else if (item.children) {
-          mid = this.ergodic(item.children, id)
+          mid = this.ergodic(item.children, id);
         }
       }
-      return mid
+      return mid;
     },
 
     redirect({ path, menuId }) {
       // if (/http:/g.test(url)) return;
       // const path = menuId ? `${url}?mid=${menuId}` : url;
-      this.$router.push(path)
+      this.$router.push(path);
     },
     formatId(menu, parent) {
       menu.forEach((item, index) => {
         if (parent) {
-          item.id = `${parent.id}-${index}`
+          item.id = `${parent.id}-${index}`;
         } else {
-          item.id = `${index}`
+          item.id = `${index}`;
         }
-        if (item.children) this.formatId(item.children, item)
-      })
+        if (item.children) this.formatId(item.children, item);
+      });
     },
     listFilter() {
-      this.formatId(this.menus)
+      this.formatId(this.menus);
     },
   },
-}
+};

@@ -6,14 +6,12 @@ export default {
   functional: true,
   components: { Logo },
   render(h, context) {
-    const { headerMenu, headerRightContent } = context.scopedSlots;
+    const { headerMenu, headerRightContent, logo } = context.scopedSlots;
     console.info(context);
     return (
       <div class="header">
         <router-link class="logo" to="/">
-          <slot name="logo">
-            <Logo />
-          </slot>
+          {logo() || <Logo />}
           <el-divider direction="vertical"></el-divider>
         </router-link>
         {headerMenu()}

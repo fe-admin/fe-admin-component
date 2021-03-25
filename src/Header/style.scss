@@ -21,17 +21,17 @@
     color: #fff;
     justify-content: center;
 
-    /deep/ svg,
-    /deep/ img {
+    svg,
+    img {
       fill: #fff;
       height: 32px;
       width: 32px;
       margin-right: 8px;
     }
-    /deep/ h1 {
+    h1 {
       font-size: 24px;
     }
-    /deep/ .el-divider {
+    .el-divider {
       position: absolute;
       border-left: solid 1px $-header-divider-left;
       border-right: solid 1px $-header-divider-right;

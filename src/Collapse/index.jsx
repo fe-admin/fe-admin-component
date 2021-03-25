@@ -7,13 +7,13 @@ export default {
     return {};
   },
   render(h, context) {
-    const { isCollapse, ToggleCollapse } = context.props;
-    console.info(ToggleCollapse);
+    const { isCollapse, toggleCollapse } = context.props;
+    console.info(toggleCollapse);
     return (
       <div
         class="collapse"
         vOn:click={() => {
-          ToggleCollapse(!isCollapse);
+          toggleCollapse(!isCollapse);
         }}
       >
         <svg-icon

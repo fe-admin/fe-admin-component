@@ -12,7 +12,7 @@ const FeLayout = {
   render(h, context) {
     const asideTitleRender = getComponentFromProp(context, "asideTitle");
     const footerRender = getComponentFromProp(context, "footer");
-    const { isCollapse, ToggleCollapse } = context.props;
+    const { isCollapse, toggleCollapse } = context.props;
     console.info(context);
     return (
       <el-container class={isCollapse ? "fe-layout-collapse" : "fe-layout"}>
@@ -29,7 +29,7 @@ const FeLayout = {
             <Aside {...{ props: { ...context.props } }}>
               {asideTitleRender}
             </Aside>
-            <Collapse {...{ props: { ToggleCollapse, isCollapse } }} />
+            <Collapse {...{ props: { toggleCollapse, isCollapse } }} />
           </el-aside>
           <el-container class="main-content">
             <el-main>

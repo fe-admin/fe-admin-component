@@ -8,7 +8,6 @@ const install = function(Vue) {
   components.forEach(component => {
     Vue.component(component.name, component)
   })
-  return null
 }
 
 export default {
