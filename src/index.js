@@ -1,8 +1,9 @@
 import FeLayout from './FeLayout'
+import WithHeader from './WithHeader'
 import SvgIcon from './SvgIcon'
 import FeResult from './FeResult'
 
-const components = [FeLayout, SvgIcon, FeResult]
+const components = [FeLayout, SvgIcon, FeResult, WithHeader]
 
 const install = function(Vue) {
   components.forEach(component => {
@@ -15,5 +16,6 @@ export default {
   install,
   FeLayout,
   SvgIcon,
-  FeResult
+  FeResult,
+  WithHeader
 }

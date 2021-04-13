@@ -1,0 +1,20 @@
+.page-header-warp {
+  .page-header {
+    padding: 16px 17px;
+    margin: -17px -17px 17px -17px;
+    background-color: #fff;
+  }
+  .page-header-heading {
+    margin-top: 12px;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .page-header-content {
+    padding-top: 12px;
+    line-height: 24px;
+  }
+}

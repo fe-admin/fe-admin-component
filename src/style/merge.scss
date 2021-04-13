@@ -1,0 +1,13 @@
+
+
+@if global-variable-exists(header) {
+  $header: map-merge($_header, $header) !global;
+} @else {
+  $header: $_header !global;
+}
+
+@if global-variable-exists(footer) {
+  $footer: map-merge($_footer, $footer) !global;
+} @else {
+  $footer: $_footer !global;
+}

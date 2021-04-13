@@ -7,6 +7,9 @@
   padding: 17px 20px 0 217px;
   width: 100%;
   transition: 0.3s all ease-in-out;
+  .el-main {
+    overflow: visible;
+  }
   .el-main,
   .el-footer {
     padding: 0;

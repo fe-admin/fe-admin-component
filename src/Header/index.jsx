@@ -1,22 +1,20 @@
-import Logo from "../Logo";
-import "./style.scss";
+import Logo from '../Logo'
+import './style.scss'
 
 export default {
-  name: "Header",
+  name: 'Header',
   functional: true,
   components: { Logo },
   render(h, context) {
-    const { headerMenu, headerRightContent, logo } = context.scopedSlots;
-    console.info(context);
+    const { headerMenu, headerRightContent, logo } = context.scopedSlots
     return (
       <div class="header">
         <router-link class="logo" to="/">
-          {logo() || <Logo />}
-          <el-divider direction="vertical"></el-divider>
+          {(logo && logo()) || <Logo />}
         </router-link>
-        {headerMenu()}
-        {headerRightContent()}
+        {headerMenu && headerMenu()}
+        {headerRightContent && headerRightContent()}
       </div>
-    );
+    )
   },
-};
+}

@@ -1,7 +1,14 @@
+.el-aside{
+  transition-property: width,height;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.1);
+
+}
 .fe-aside {
   border-right: none;
   position: fixed;
-  top: 46px;
+  top: map-get($header, height);
   left: 0;
   height: 2000px;
   height: 100%;
@@ -9,9 +16,10 @@
   flex-direction: column;
   background-color: #fff;
   overflow: hidden;
-  transition: 0.3s all ease-in-out;
+
   width: 200px;
   z-index: 9;
+  
   .item {
     position: relative;
     height: 97px;
