@@ -1,26 +1,22 @@
-import "./style.scss";
+import './style.scss'
 
 export default {
-  name: "Collapse",
+  name: 'Collapse',
   functional: true,
   data() {
-    return {};
+    return {}
   },
   render(h, context) {
-    const { isCollapse, toggleCollapse } = context.props;
-    console.info(toggleCollapse);
+    const { isCollapse, toggleCollapse } = context.props
     return (
       <div
         class="collapse"
         vOn:click={() => {
-          toggleCollapse(!isCollapse);
+          toggleCollapse(!isCollapse)
         }}
       >
-        <svg-icon
-          className="collapse-icon"
-          iconName={isCollapse ? "fe-menu-open" : "fe-menu-close"}
-        />
+        <svg-icon className="collapse-icon" iconName={isCollapse ? 'fe-menu-open' : 'fe-menu-close'} />
       </div>
-    );
+    )
   },
-};
+}
