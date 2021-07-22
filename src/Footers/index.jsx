@@ -2,9 +2,6 @@ import './style.scss'
 
 export default {
   name: 'FeFooter',
-  data() {
-    return {}
-  },
   render(h) {
     const footerDefault = <div class="footer-bd">Copyright &copy; 2021 <a href="https://github.com/fe-admin/fe-admin">fe-admim</a></div>
     return (
