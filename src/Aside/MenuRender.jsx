@@ -35,8 +35,9 @@ const headerRender = (h, { menus, redirect }) => {
         </el-submenu>
       )
     } else {
+      const className = `item-children${item.meta && item.meta.hidden?' hide':''}`
       domArr.push(
-        <el-menu-item index={item.id} key={item.name + item.id} class="item-children" vOn:click={() => redirect(item)}>
+        <el-menu-item index={item.id} key={item.name + item.id} class={className} vOn:click={() => redirect(item)}>
           {item.meta.icon ? <svg-icon iconName={item.meta.icon} /> : null}
           <span slot="title" class="hide">
             <span class="txt">{item.meta.title}</span>

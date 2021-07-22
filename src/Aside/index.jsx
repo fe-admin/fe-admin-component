@@ -63,7 +63,9 @@ export default {
       }
       return mid
     },
-
+    checkHidden(submenu, id){
+      return submenu.find(item=>item.id===id && item.meta.hidden);
+    },
     redirect({ path, menuId }) {
       // if (/http:/g.test(url)) return;
       // const path = menuId ? `${url}?mid=${menuId}` : url;
