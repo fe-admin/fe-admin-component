@@ -27,7 +27,7 @@ export default {
     const { activeId, defaultOpeneds, isCollapse, menuData, redirect } = this
     return (
       <el-scrollbar class="fe-aside">
-        {this.$scopedSlots.default()}
+        {this.$scopedSlots.default && this.$scopedSlots.default()}
         <MenuRender
           defaultActive={activeId}
           defaultOpeneds={defaultOpeneds}
@@ -63,8 +63,8 @@ export default {
       }
       return mid
     },
-    checkHidden(submenu, id){
-      return submenu.find(item=>item.id===id && item.meta.hidden);
+    checkHidden(submenu, id) {
+      return submenu.find((item) => item.id === id && item.meta.hidden)
     },
     redirect({ path, menuId }) {
       // if (/http:/g.test(url)) return;
