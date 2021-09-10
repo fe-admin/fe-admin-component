@@ -2,6 +2,7 @@ import Header from '../Header'
 import Footer from '../Footers'
 import Aside from '../Aside'
 import Collapse from '../Collapse'
+import TagView from '../TagViews'
 import { getComponentFromProp } from '../utils'
 import './style.scss'
 
@@ -11,7 +12,7 @@ const FeLayout = {
   render(h, context) {
     const asideTitleRender = getComponentFromProp(context, 'asideTitle')
     const footerRender = getComponentFromProp(context, 'footer')
-    const { isCollapse, toggleCollapse } = context.props
+    const { isCollapse, toggleCollapse, showTagViews } = context.props
     return (
       <el-container class={isCollapse ? 'fe-layout-collapse' : 'fe-layout'}>
         <el-header height="48px">
@@ -29,7 +30,16 @@ const FeLayout = {
           </el-aside>
           <el-container class="main-content">
             <el-main>
-              <router-view />
+              {showTagViews ? <TagView {...{ props: { ...context.props } }}></TagView> : null}
+              {showTagViews ? (
+                <transition>
+                  <keep-alive>
+                    <router-view />
+                  </keep-alive>
+                </transition>
+              ) : (
+                <router-view />
+              )}
             </el-main>
             <el-footer height="38px">
               <Footer>{footerRender}</Footer>

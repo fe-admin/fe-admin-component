@@ -1,3 +1,4 @@
+import get from 'lodash.get'
 import MenuRender from './MenuRender'
 import './style.scss'
 
@@ -19,10 +20,12 @@ export default {
   mounted() {
     this.redirect = this.redirect.bind(this)
   },
+
   updated() {
     this.listFilter()
     this.setIndex()
   },
+
   render() {
     const { activeId, defaultOpeneds, isCollapse, menuData, redirect } = this
     return (
@@ -46,7 +49,6 @@ export default {
       this.flag = false
       this.updateMenuId(this.activeId)
     },
-
     ergodic(list, id) {
       let mid = 0
       if (this.flag) return
@@ -66,9 +68,7 @@ export default {
     checkHidden(submenu, id) {
       return submenu.find((item) => item.id === id && item.meta.hidden)
     },
-    redirect({ path, menuId }) {
-      // if (/http:/g.test(url)) return;
-      // const path = menuId ? `${url}?mid=${menuId}` : url;
+    redirect({ path, meta: { title } }) {
       this.$router.push(path)
     },
     formatId(menu, parent) {

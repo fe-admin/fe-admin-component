@@ -1,0 +1,19 @@
+.tag-view {
+  margin: -17px -17px 0 -17px;
+  background: #fff;
+  height: 41px;
+  margin-bottom: 17px;
+  border-bottom: solid 1px #e4e7ec;
+  .el-tabs__header {
+    margin: 0;
+  }
+
+  > .el-tabs__header .el-tabs__nav {
+    border-radius: 0 !important;
+    border-top: none !important;
+  }
+
+  .el-tabs__nav-wrap {
+    margin-bottom: 0;
+  }
+}
