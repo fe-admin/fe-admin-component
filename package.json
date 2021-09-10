@@ -9,9 +9,25 @@
     "precommit": "lint-staged",
     "lint": "eslint --fix"
   },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fe-admin/fe-admin-compnent.git"
+  },
+  "keywords": [
+    "fe-admin",
+    "fe-admin-compnent"
+  ],
   "files": [
     "lib"
   ],
+  "author": "tjubao",
+  "email": "tjubao@gmail.com",
+  "bugs": {
+    "url": "https://github.com/fe-admin/fe-admin-compnent/issues"
+  },
+  "homepage": "https://github.com/fe-admin/fe-admin-compnent",
+
   "dependencies": {
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
