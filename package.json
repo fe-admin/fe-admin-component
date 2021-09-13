@@ -12,11 +12,11 @@
 
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fe-admin/fe-admin-compnent.git"
+    "url": "git+https://github.com/fe-admin/fe-admin-component.git"
   },
   "keywords": [
     "fe-admin",
-    "fe-admin-compnent"
+    "fe-admin-component"
   ],
   "files": [
     "lib"
@@ -24,9 +24,9 @@
   "author": "tjubao",
   "email": "tjubao@gmail.com",
   "bugs": {
-    "url": "https://github.com/fe-admin/fe-admin-compnent/issues"
+    "url": "https://github.com/fe-admin/fe-admin-component/issues"
   },
-  "homepage": "https://github.com/fe-admin/fe-admin-compnent",
+  "homepage": "https://github.com/fe-admin/fe-admin-component",
 
   "dependencies": {
     "core-js": "^3.6.5",
