@@ -10,29 +10,29 @@
   line-height: map-get($header, line-height);
   background-color: map-get($header, background-color);
   z-index: 200;
-.logo-wrapper{
-  display: flex;
-  align-items: center;
-}
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
   .logo {
     position: relative;
-    width:   map-get($header, logo-width);
+    width: map-get($header, logo-width);
     display: flex;
     align-items: center;
     overflow: hidden;
     color: map-get($header, logo-color);
-    justify-content: center;
-    margin-right: 8px;
+    justify-content: left;
     svg,
     img {
-      margin: map-get($header, logo-icon-margin );
+      margin: map-get($header, logo-icon-margin);
       fill: map-get($header, logo-color);
       height: map-get($header, logo-icon-height);
-      width:   map-get($header, logo-icon-width);
+      width: map-get($header, logo-icon-width);
     }
     .icon {
-      width: 100px;
-      height: 32px;
+      width: 130px;
+      height: 40px;
+      margin-left: 16px;
     }
     h1 {
       font-size: 24px;
