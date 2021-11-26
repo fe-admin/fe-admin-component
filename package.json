@@ -2,14 +2,13 @@
   "name": "fe-admin-component",
   "main": "./lib/index.js",
   "license": "MIT",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "scripts": {
     "release": "standard-version",
     "prepare": "husky install",
     "precommit": "lint-staged",
     "lint": "eslint --fix"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fe-admin/fe-admin-component.git"
@@ -27,7 +26,6 @@
     "url": "https://github.com/fe-admin/fe-admin-component/issues"
   },
   "homepage": "https://github.com/fe-admin/fe-admin-component",
-
   "dependencies": {
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
