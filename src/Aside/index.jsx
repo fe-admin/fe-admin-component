@@ -49,12 +49,27 @@ export default {
       this.flag = false
       this.updateMenuId(this.activeId)
     },
+    getRelation(list, name) {
+      var id = 0
+      for (var i = 0; i < list.length; i += 1) {
+        if (list[i].name === name) {
+          id = list[i].id
+          break
+        }
+      }
+      return id
+    },
     ergodic(list, id) {
       let mid = 0
       if (this.flag) return
       for (let index = 0; index < list.length; index += 1) {
         const item = list[index]
         if (this.flag) break
+        if (item.meta.relation) {
+          mid = this.getRelation(list, item.meta.relation)
+          this.flag = true
+          break
+        }
         if (item.name === id) {
           mid = item.id
           this.flag = true
