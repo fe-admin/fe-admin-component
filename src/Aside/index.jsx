@@ -65,13 +65,12 @@ export default {
       for (let index = 0; index < list.length; index += 1) {
         const item = list[index]
         if (this.flag) break
-        if (item.meta.relation) {
-          mid = this.getRelation(list, item.meta.relation)
-          this.flag = true
-          break
-        }
         if (item.name === id) {
-          mid = item.id
+          if (item.meta.relation) {
+            mid = this.getRelation(list, item.meta.relation)
+          } else {
+            mid = item.id
+          }
           this.flag = true
           break
         } else if (item.children) {
