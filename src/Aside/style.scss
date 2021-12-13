@@ -37,7 +37,7 @@
   .item-children,
   .el-submenu {
     position: relative;
-    line-height: 40px;
+    line-height: 46px;
     color: #666;
     cursor: pointer;
     font-size: 14px;
@@ -65,8 +65,8 @@
   }
   .el-menu-item {
     position: relative;
-    height: 40px !important;
-    line-height: 40px !important;
+    height: 46px !important;
+    line-height: 46px !important;
     border-right: solid 3px #fff;
   }
   .el-submenu .el-menu-item {
@@ -149,8 +149,8 @@
 .fe-aside {
   .el-submenu__title {
     position: relative;
-    line-height: 40px;
-    height: 40px;
+    line-height: 46px;
+    height: 46px;
     color: #666;
     cursor: pointer;
     font-size: 14px;
@@ -174,8 +174,8 @@
 }
 .el-menu--popup {
   .item-children {
-    height: 40px;
-    line-height: 40px;
+    height: 46px;
+    line-height: 46px;
   }
   .item-children:hover,
   .item-children:focus {
