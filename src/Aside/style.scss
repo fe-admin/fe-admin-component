@@ -1,4 +1,5 @@
 .el-aside {
+  width: 180px;
   transition-property: width, height;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
@@ -15,7 +16,6 @@
   flex-direction: column;
   background-color: #fff;
   overflow: hidden;
-
   width: 180px;
   z-index: 9;
 
@@ -37,7 +37,7 @@
   .item-children,
   .el-submenu {
     position: relative;
-    line-height: 48px;
+    line-height: 40px;
     color: #666;
     cursor: pointer;
     font-size: 14px;
@@ -60,7 +60,7 @@
   }
   .el-menu {
     border-right: none;
-    width: 18px;
+    width: 180px;
     transition: 0.3s all ease-in-out;
   }
   .el-menu-item {
@@ -149,8 +149,8 @@
 .fe-aside {
   .el-submenu__title {
     position: relative;
-    line-height: 48px;
-    height: 48px;
+    line-height: 40px;
+    height: 40px;
     color: #666;
     cursor: pointer;
     font-size: 14px;

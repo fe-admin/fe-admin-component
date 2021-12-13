@@ -24,7 +24,7 @@ const FeLayout = {
           ></Header>
         </el-header>
         <el-container>
-          <el-aside class="el-aside-menu" width="200px">
+          <el-aside class="el-aside-menu" width="180px">
             <Aside {...{ props: { ...context.props } }}>{asideTitleRender}</Aside>
             <Collapse {...{ props: { toggleCollapse, isCollapse } }} />
           </el-aside>
