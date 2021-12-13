@@ -49,16 +49,6 @@ export default {
       this.flag = false
       this.updateMenuId(this.activeId)
     },
-    getRelation(list, name) {
-      var id = 0
-      for (var i = 0; i < list.length; i += 1) {
-        if (list[i].name === name) {
-          id = list[i].id
-          break
-        }
-      }
-      return id
-    },
     ergodic(list, id) {
       let mid = 0
       if (this.flag) return
@@ -67,7 +57,7 @@ export default {
         if (this.flag) break
         if (item.name === id) {
           if (item.meta.relation) {
-            mid = this.getRelation(list, item.meta.relation)
+            mid = this.ergodic(list, item.meta.relation)
           } else {
             mid = item.id
           }
