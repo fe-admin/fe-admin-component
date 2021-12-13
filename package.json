@@ -2,7 +2,7 @@
   "name": "fe-admin-component",
   "main": "./lib/index.js",
   "license": "MIT",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "scripts": {
     "release": "standard-version",
     "prepare": "husky install",
