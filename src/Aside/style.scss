@@ -1,3 +1,6 @@
+.el-aside-menu {
+  overflow: hidden;
+}
 .el-aside {
   width: 180px;
   transition-property: width, height;
@@ -18,7 +21,9 @@
   overflow: hidden;
   width: 180px;
   z-index: 9;
-
+  .el-scrollbar__wrap {
+    overflow-x: hidden;
+  }
   .item {
     position: relative;
     height: 97px;
