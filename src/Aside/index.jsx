@@ -1,4 +1,3 @@
-import get from 'lodash.get'
 import MenuRender from './MenuRender'
 import './style.scss'
 
@@ -40,6 +39,7 @@ export default {
           menus={menuData}
           redirect={redirect}
         ></MenuRender>
+        {this.$scopedSlots.extra && this.$scopedSlots.extra()}
       </el-scrollbar>
     )
   },

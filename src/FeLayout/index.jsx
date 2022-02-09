@@ -11,6 +11,7 @@ const FeLayout = {
   functional: true,
   render(h, context) {
     const asideTitleRender = getComponentFromProp(context, 'asideTitle')
+    const asideExtraRender = getComponentFromProp(context, 'asideExtra')
     const footerRender = getComponentFromProp(context, 'footer')
     const { isCollapse, toggleCollapse, showTagViews } = context.props
     return (
@@ -25,7 +26,15 @@ const FeLayout = {
         </el-header>
         <el-container>
           <el-aside class="el-aside-menu" width="180px">
-            <Aside {...{ props: { ...context.props } }}>{asideTitleRender}</Aside>
+            <Aside
+              {...{
+                props: { ...context.props },
+                scopedSlots: {
+                  default: () => asideTitleRender,
+                  extra: () => asideExtraRender,
+                },
+              }}
+            ></Aside>
             <Collapse {...{ props: { toggleCollapse, isCollapse } }} />
           </el-aside>
           <el-container class="main-content">
