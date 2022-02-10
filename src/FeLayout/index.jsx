@@ -12,6 +12,7 @@ const FeLayout = {
   render(h, context) {
     const asideTitleRender = getComponentFromProp(context, 'asideTitle')
     const asideExtraRender = getComponentFromProp(context, 'asideExtra')
+    const extraRender = getComponentFromProp(context, 'extra')
     const footerRender = getComponentFromProp(context, 'footer')
     const { isCollapse, toggleCollapse, showTagViews } = context.props
     return (
@@ -55,6 +56,7 @@ const FeLayout = {
             </el-footer>
           </el-container>
         </el-container>
+        <div>{extraRender}</div>
       </el-container>
     )
   },
