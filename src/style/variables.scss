@@ -1,8 +1,8 @@
-$-aside-menu-color: #1890ff;
-$-aside-menu-tit-line: #b8bed1;
+$-aside-menu-color: #0f88ed;
+$-aside-menu-bgcolor: #3088d20d;
 
 $_header: (
-  background-color: #001529,
+  background-color: #fff,
   height: 48px,
   line-heigth: 48px,
   logo-width: 200px,
@@ -13,10 +13,10 @@ $_header: (
 );
 
 $_menu: (
-  color: #34378b,
+  color: #0f88ed,
   line: #b8bed1,
 );
 
 $_footer: (
-  color: rgba(0, 0, 0, 0.45),
+  color: rgba(175, 81, 81, 0.45),
 );

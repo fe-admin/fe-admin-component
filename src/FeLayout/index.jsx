@@ -17,7 +17,7 @@ const FeLayout = {
     const { isCollapse, toggleCollapse, showTagViews } = context.props
     return (
       <el-container class={isCollapse ? 'fe-layout-collapse' : 'fe-layout'}>
-        <el-header height="48px">
+        <el-header class="fe-header" height="48px">
           <Header
             {...{
               props: { ...context.props },
@@ -25,7 +25,7 @@ const FeLayout = {
             }}
           ></Header>
         </el-header>
-        <el-container>
+        <el-container class="fe-container">
           <el-aside class="el-aside-menu" width="180px">
             <Aside
               {...{
