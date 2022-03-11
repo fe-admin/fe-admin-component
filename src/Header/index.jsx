@@ -9,9 +9,7 @@ export default {
     const { headerMenu, headerRightContent, logo } = context.scopedSlots
     return (
       <div class="header">
-        <router-link class="logo" to="/">
-          {(logo && logo()) || <Logo />}
-        </router-link>
+        <span class="logo">{(logo && logo()) || <Logo />}</span>
         {headerMenu && headerMenu()}
         {headerRightContent && headerRightContent()}
       </div>
