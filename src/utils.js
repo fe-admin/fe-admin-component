@@ -10,13 +10,14 @@ export function getMenuItem(item) {
   }
 }
 
-export function checkAlive({ menuData, menuId }) {
-  let falg = false
+export function getAlive({ menuData }) {
+  let list = []
   if (Array.isArray(menuData)) {
-    const item = menuData.find((item) => item.name === menuId)
-    if (item) {
-      return item.meta.keepAlive
-    }
+    menuData.forEach((item) => {
+      if (item.meta.keepAlive) {
+        list.push(item.name)
+      }
+    })
   }
-  return falg
+  return list.join(',')
 }

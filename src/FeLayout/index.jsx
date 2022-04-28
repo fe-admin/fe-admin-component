@@ -1,7 +1,7 @@
 /*
  * @Author: long
  * @Date: 2021-11-04 09:24:08
- * @LastEditTime: 2022-04-28 11:51:01
+ * @LastEditTime: 2022-04-28 14:48:11
  * @LastEditors: long
  * @Description:
  * @FilePath: /website/Users/long/Documents/workspace/fe-admin-component/src/FeLayout/index.jsx
@@ -12,13 +12,14 @@ import Footer from '../Footers'
 import Aside from '../Aside'
 import Collapse from '../Collapse'
 import TagView from '../TagViews'
-import { getComponentFromProp, checkAlive } from '../utils'
+import { getComponentFromProp, getAlive } from '../utils'
 import './style.scss'
 
 const FeLayout = {
   name: 'FeLayout',
   functional: true,
   render(h, context) {
+    console.info(context)
     const asideTitleRender = getComponentFromProp(context, 'asideTitle')
     const asideExtraRender = getComponentFromProp(context, 'asideExtra')
     const extraRender = getComponentFromProp(context, 'extra')
@@ -50,15 +51,12 @@ const FeLayout = {
           <el-container class="main-content">
             <el-main>
               {showTagViews ? <TagView {...{ props: { ...context.props } }}></TagView> : null}
-              {checkAlive(context.props) ? (
-                <transition>
-                  <keep-alive>
-                    <router-view />
-                  </keep-alive>
-                </transition>
-              ) : (
-                <router-view />
-              )}
+
+              <transition>
+                <keep-alive {...{ props: { max: 5, include: getAlive(context.props) } }}>
+                  <router-view />
+                </keep-alive>
+              </transition>
             </el-main>
             <el-footer height="38px">
               <Footer>{footerRender}</Footer>
