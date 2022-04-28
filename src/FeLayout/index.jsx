@@ -1,9 +1,18 @@
+/*
+ * @Author: long
+ * @Date: 2021-11-04 09:24:08
+ * @LastEditTime: 2022-04-28 11:51:01
+ * @LastEditors: long
+ * @Description:
+ * @FilePath: /website/Users/long/Documents/workspace/fe-admin-component/src/FeLayout/index.jsx
+ *
+ */
 import Header from '../Header'
 import Footer from '../Footers'
 import Aside from '../Aside'
 import Collapse from '../Collapse'
 import TagView from '../TagViews'
-import { getComponentFromProp } from '../utils'
+import { getComponentFromProp, checkAlive } from '../utils'
 import './style.scss'
 
 const FeLayout = {
@@ -41,7 +50,7 @@ const FeLayout = {
           <el-container class="main-content">
             <el-main>
               {showTagViews ? <TagView {...{ props: { ...context.props } }}></TagView> : null}
-              {showTagViews ? (
+              {checkAlive(context.props) ? (
                 <transition>
                   <keep-alive>
                     <router-view />

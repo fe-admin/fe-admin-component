@@ -9,3 +9,14 @@ export function getMenuItem(item) {
     title: item.meta?.title || '',
   }
 }
+
+export function checkAlive({ menuData, menuId }) {
+  let falg = false
+  if (Array.isArray(menuData)) {
+    const item = menuData.find((item) => item.name === menuId)
+    if (item) {
+      return item.meta.keepAlive
+    }
+  }
+  return falg
+}
