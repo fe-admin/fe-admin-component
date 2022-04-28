@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.28](https://github.com/fe-admin/fe-admin-component/compare/v0.0.27...v0.0.28) (2022-04-28)
+
 ### [0.0.27](https://github.com/fe-admin/fe-admin-component/compare/v0.0.26...v0.0.27) (2022-03-14)
 
 ### [0.0.25](https://github.com/fe-admin/fe-admin-component/compare/v0.0.24...v0.0.25) (2022-02-10)
