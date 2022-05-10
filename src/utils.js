@@ -11,7 +11,7 @@ export function getMenuItem(item) {
 }
 
 export function getAlive({ menuData }) {
-  let list = []
+  let list = ['xxx']
   if (Array.isArray(menuData)) {
     menuData.forEach((item) => {
       if (item.meta.keepAlive) {
