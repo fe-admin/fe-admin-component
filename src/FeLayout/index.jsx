@@ -1,7 +1,7 @@
 /*
  * @Author: long
  * @Date: 2021-11-04 09:24:08
- * @LastEditTime: 2022-04-28 14:48:11
+ * @LastEditTime: 2022-08-30 14:05:35
  * @LastEditors: long
  * @Description:
  * @FilePath: /website/Users/long/Documents/workspace/fe-admin-component/src/FeLayout/index.jsx
@@ -52,11 +52,9 @@ const FeLayout = {
             <el-main>
               {showTagViews ? <TagView {...{ props: { ...context.props } }}></TagView> : null}
 
-              <transition>
-                <keep-alive {...{ props: { max: 5, include: getAlive(context.props) } }}>
-                  <router-view />
-                </keep-alive>
-              </transition>
+              <keep-alive {...{ props: { max: 5, include: getAlive(context.props) } }}>
+                <router-view />
+              </keep-alive>
             </el-main>
             <el-footer height="38px">
               <Footer>{footerRender}</Footer>
