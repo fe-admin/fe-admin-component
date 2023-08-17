@@ -1,18 +1,17 @@
-.fe-container{
-  padding-top: 64px;
+html,
+body,
+#app {
+  min-width: 1280px;
+  font-size: 14px;
+  font-family: pingfang SC, helvetica neue, arial, hiragino sans gb, microsoft yahei ui, microsoft yahei, simsun,
+    sans-serif !important;
 }
-.fe-layout,
-.fe-layout-collapse {
-  min-height: 100%;
-}
-// 右侧主要内容
+
 .main-content {
-  padding: 17px 17px 0 217px;
+  padding: 17px 17px 0;
   width: 100%;
   transition: 0.3s all ease-in-out;
-  .el-main {
-    overflow: visible;
-  }
+  background: #f2f3f5;
   .el-main,
   .el-footer {
     padding: 0;
