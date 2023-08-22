@@ -10,7 +10,8 @@
 }
 .fe-layout-collapse {
   .el-aside {
-    margin-left: -220px !important;
+    width: 221px !important;
+    margin-left: -220px;
   }
   .el-menu--collapse {
     margin-left: 0;
@@ -31,18 +32,7 @@
   .el-menu-item:focus {
     background-color: transparent !important;
   }
-  .item {
-    position: relative;
-    height: 97px;
-    padding: 25px 0;
-    text-align: center;
-    font-size: 14px;
-    color: #7f8490;
-    .tit {
-      display: block;
-      line-height: 20px;
-    }
-  }
+
   .hide {
     display: none;
   }
